@@ -21,6 +21,7 @@ import (
 	"io"
 
 	"github.com/AndrienkoAleksandr/client-go/rest"
+	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
@@ -66,6 +67,7 @@ func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	// for serializing the options
 	config.GroupVersion = &schema.GroupVersion{}
 	config.APIPath = "/if-you-see-this-search-for-the-break"
+	logrus.Infof("TEST==============")
 
 	restClient, err := rest.RESTClientFor(config)
 	if err != nil {
