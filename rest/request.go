@@ -735,6 +735,7 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 			// This request should also be throttled with the client-internal throttler.
 			r.tryThrottle()
 		}
+		logrus.Infof("+++++++++++++++ More filled request %+v", req)
 		resp, err := client.Do(req)
 		updateURLMetrics(r, resp, err)
 		if err != nil {
