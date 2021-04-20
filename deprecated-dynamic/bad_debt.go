@@ -21,13 +21,13 @@ import (
 	"io"
 	"strings"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	"github.com/AndrienkoAleksandr/client-go/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/client-go/kubernetes/scheme"
-	"k8s.io/client-go/rest"
 )
 
 // dynamicCodec is a codec that wraps the standard unstructured codec

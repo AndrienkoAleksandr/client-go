@@ -37,6 +37,10 @@ import (
 
 	"k8s.io/klog"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	restclientwatch "github.com/AndrienkoAleksandr/client-go/rest/watch"
+	"github.com/AndrienkoAleksandr/client-go/util/flowcontrol"
+	utiltesting "github.com/AndrienkoAleksandr/client-go/util/testing"
 	v1 "k8s.io/api/core/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -49,10 +53,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/httpstream"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/kubernetes/scheme"
-	restclientwatch "k8s.io/client-go/rest/watch"
-	"k8s.io/client-go/util/flowcontrol"
-	utiltesting "k8s.io/client-go/util/testing"
 )
 
 func TestNewRequestSetsAccept(t *testing.T) {

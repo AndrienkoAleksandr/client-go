@@ -27,15 +27,15 @@ import (
 
 	"fmt"
 
-	"k8s.io/api/core/v1"
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	utiltesting "github.com/AndrienkoAleksandr/client-go/util/testing"
+	v1 "k8s.io/api/core/v1"
 	v1beta1 "k8s.io/api/extensions/v1beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/client-go/kubernetes/scheme"
-	utiltesting "k8s.io/client-go/util/testing"
 )
 
 type TestParam struct {

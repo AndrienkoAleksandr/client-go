@@ -21,12 +21,12 @@ package v1beta1
 import (
 	"time"
 
+	scheme "github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1beta1 "k8s.io/api/admissionregistration/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	scheme "k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 // MutatingWebhookConfigurationsGetter has a method to return a MutatingWebhookConfigurationInterface.

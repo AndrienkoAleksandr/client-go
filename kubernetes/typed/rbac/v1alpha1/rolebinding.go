@@ -21,12 +21,12 @@ package v1alpha1
 import (
 	"time"
 
+	scheme "github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1alpha1 "k8s.io/api/rbac/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	scheme "k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 // RoleBindingsGetter has a method to return a RoleBindingInterface.

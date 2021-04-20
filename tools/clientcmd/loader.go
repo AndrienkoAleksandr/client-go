@@ -30,13 +30,13 @@ import (
 	"github.com/imdario/mergo"
 	"k8s.io/klog"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
+	clientcmdapi "github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
+	clientcmdlatest "github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api/latest"
+	"github.com/AndrienkoAleksandr/client-go/util/homedir"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	restclient "k8s.io/client-go/rest"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	clientcmdlatest "k8s.io/client-go/tools/clientcmd/api/latest"
-	"k8s.io/client-go/util/homedir"
 )
 
 const (

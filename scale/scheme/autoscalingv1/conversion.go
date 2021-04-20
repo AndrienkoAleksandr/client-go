@@ -19,11 +19,11 @@ package autoscalingv1
 import (
 	"fmt"
 
+	scheme "github.com/AndrienkoAleksandr/client-go/scale/scheme"
 	v1 "k8s.io/api/autoscaling/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/conversion"
 	"k8s.io/apimachinery/pkg/runtime"
-	scheme "k8s.io/client-go/scale/scheme"
 )
 
 // addConversions registers conversions between the internal version

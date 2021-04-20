@@ -19,9 +19,9 @@ limitations under the License.
 package v1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1 "k8s.io/api/authorization/v1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type AuthorizationV1Interface interface {

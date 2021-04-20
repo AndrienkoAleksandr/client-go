@@ -21,19 +21,19 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes"
+	"github.com/AndrienkoAleksandr/client-go/rest"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/rest"
 	//
 	// Uncomment to load all auth plugins
-	// _ "k8s.io/client-go/plugin/pkg/client/auth
+	// _ "github.com/AndrienkoAleksandr/client-go/plugin/pkg/client/auth
 	//
 	// Or uncomment to load specific auth plugins
-	// _ "k8s.io/client-go/plugin/pkg/client/auth/azure"
-	// _ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
-	// _ "k8s.io/client-go/plugin/pkg/client/auth/oidc"
-	// _ "k8s.io/client-go/plugin/pkg/client/auth/openstack"
+	// _ "github.com/AndrienkoAleksandr/client-go/plugin/pkg/client/auth/azure"
+	// _ "github.com/AndrienkoAleksandr/client-go/plugin/pkg/client/auth/gcp"
+	// _ "github.com/AndrienkoAleksandr/client-go/plugin/pkg/client/auth/oidc"
+	// _ "github.com/AndrienkoAleksandr/client-go/plugin/pkg/client/auth/openstack"
 )
 
 func main() {

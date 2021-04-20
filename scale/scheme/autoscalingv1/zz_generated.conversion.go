@@ -21,10 +21,10 @@ limitations under the License.
 package autoscalingv1
 
 import (
+	scheme "github.com/AndrienkoAleksandr/client-go/scale/scheme"
 	v1 "k8s.io/api/autoscaling/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	scheme "k8s.io/client-go/scale/scheme"
 )
 
 func init() {

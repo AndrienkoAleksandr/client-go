@@ -31,15 +31,15 @@ import (
 
 	"k8s.io/klog"
 
+	certificatesclient "github.com/AndrienkoAleksandr/client-go/kubernetes/typed/certificates/v1beta1"
+	"github.com/AndrienkoAleksandr/client-go/util/cert"
+	"github.com/AndrienkoAleksandr/client-go/util/certificate/csr"
+	"github.com/AndrienkoAleksandr/client-go/util/keyutil"
 	certificates "k8s.io/api/certificates/v1beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/wait"
-	certificatesclient "k8s.io/client-go/kubernetes/typed/certificates/v1beta1"
-	"k8s.io/client-go/util/cert"
-	"k8s.io/client-go/util/certificate/csr"
-	"k8s.io/client-go/util/keyutil"
 )
 
 // certificateWaitTimeout controls the amount of time we wait for certificate

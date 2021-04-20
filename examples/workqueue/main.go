@@ -23,15 +23,15 @@ import (
 
 	"k8s.io/klog"
 
-	"k8s.io/api/core/v1"
+	"github.com/AndrienkoAleksandr/client-go/kubernetes"
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
+	"github.com/AndrienkoAleksandr/client-go/tools/clientcmd"
+	"github.com/AndrienkoAleksandr/client-go/util/workqueue"
+	v1 "k8s.io/api/core/v1"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/tools/cache"
-	"k8s.io/client-go/tools/clientcmd"
-	"k8s.io/client-go/util/workqueue"
 )
 
 type Controller struct {

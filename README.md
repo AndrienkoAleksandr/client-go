@@ -3,7 +3,7 @@
 Go clients for talking to a [kubernetes](http://kubernetes.io/) cluster.
 
 We currently recommend using the v11.0.0 tag. See [INSTALL.md](/INSTALL.md) for
-detailed installation instructions. `go get k8s.io/client-go/...` works, but
+detailed installation instructions. `go get github.com/AndrienkoAleksandr/client-go/...` works, but
 will build `master`, which doesn't handle the dependencies well.
 
 [![BuildStatus Widget]][BuildStatus Result]
@@ -16,8 +16,8 @@ will build `master`, which doesn't handle the dependencies well.
 [GoReport Status]: https://goreportcard.com/report/github.com/kubernetes/client-go
 [GoReport Widget]: https://goreportcard.com/badge/github.com/kubernetes/client-go
 
-[GoDocWidget]: https://godoc.org/k8s.io/client-go?status.svg
-[GoDocReference]:https://godoc.org/k8s.io/client-go 
+[GoDocWidget]: https://godoc.org/github.com/AndrienkoAleksandr/client-go?status.svg
+[GoDocReference]:https://godoc.org/github.com/AndrienkoAleksandr/client-go 
 
 ## Table of Contents
 
@@ -159,13 +159,13 @@ existing users won't be broken.
 ### Kubernetes tags
 
 This repository is still a mirror of
-[k8s.io/kubernetes/staging/src/client-go](https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/client-go),
+[k8s.io/kubernetes/staging/src/client-go](https://github.com/kubernetes/kubernetes/tree/master/staging/src/github.com/AndrienkoAleksandr/client-go),
 the code development is still done in the staging area. Since Kubernetes 1.8
 release, when syncing the code from the staging area, we also sync the Kubernetes
 version tags to client-go, prefixed with "kubernetes-". For example, if you check
 out the `kubernetes-v1.8.0` tag in client-go, the code you get is exactly the
 same as if you check out the `v1.8.0` tag in kubernetes, and change directory to
-`staging/src/k8s.io/client-go`. The purpose is to let users quickly find matching
+`staging/src/github.com/AndrienkoAleksandr/client-go`. The purpose is to let users quickly find matching
 commits among published repos, like
 [sample-apiserver](https://github.com/kubernetes/sample-apiserver),
 [apiextension-apiserver](https://github.com/kubernetes/apiextensions-apiserver),
@@ -175,7 +175,7 @@ you care about backwards compatibility.
 
 ### How to get it
 
-You can use `go get k8s.io/client-go/...` to get client-go, but **you will get
+You can use `go get github.com/AndrienkoAleksandr/client-go/...` to get client-go, but **you will get
 the unstable master branch** and `client-go`'s vendored dependencies will not be
 added to your `$GOPATH`. So we think most users will want to use a dependency
 management system. See [INSTALL.md](/INSTALL.md) for detailed instructions.

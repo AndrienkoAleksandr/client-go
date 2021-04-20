@@ -21,11 +21,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/util/retry"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/clock"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/client-go/util/retry"
 	"k8s.io/utils/buffer"
 
 	"k8s.io/klog"

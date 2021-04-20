@@ -27,12 +27,12 @@ import (
 	"testing"
 	"time"
 
+	certificatesclient "github.com/AndrienkoAleksandr/client-go/kubernetes/typed/certificates/v1beta1"
 	certificates "k8s.io/api/certificates/v1beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	watch "k8s.io/apimachinery/pkg/watch"
-	certificatesclient "k8s.io/client-go/kubernetes/typed/certificates/v1beta1"
 )
 
 var storeCertData = newCertificateData(`-----BEGIN CERTIFICATE-----

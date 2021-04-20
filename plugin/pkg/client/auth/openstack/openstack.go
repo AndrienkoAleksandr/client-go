@@ -26,8 +26,8 @@ import (
 	"github.com/gophercloud/gophercloud/openstack"
 	"k8s.io/klog"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	"k8s.io/apimachinery/pkg/util/net"
-	restclient "k8s.io/client-go/rest"
 )
 
 func init() {

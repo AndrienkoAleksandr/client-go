@@ -19,6 +19,7 @@ limitations under the License.
 package fake
 
 import (
+	testing "github.com/AndrienkoAleksandr/client-go/testing"
 	appsv1 "k8s.io/api/apps/v1"
 	autoscalingv1 "k8s.io/api/autoscaling/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -26,7 +27,6 @@ import (
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	testing "k8s.io/client-go/testing"
 )
 
 // FakeDeployments implements DeploymentInterface

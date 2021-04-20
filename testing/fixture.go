@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"sync"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	jsonpatch "github.com/evanphx/json-patch"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
@@ -30,7 +31,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/json"
 	"k8s.io/apimachinery/pkg/util/strategicpatch"
 	"k8s.io/apimachinery/pkg/watch"
-	restclient "k8s.io/client-go/rest"
 )
 
 // ObjectTracker keeps track of objects. It is intended to be used to

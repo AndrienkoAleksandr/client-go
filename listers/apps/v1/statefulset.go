@@ -19,10 +19,10 @@ limitations under the License.
 package v1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
 	v1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/client-go/tools/cache"
 )
 
 // StatefulSetLister helps list StatefulSets.

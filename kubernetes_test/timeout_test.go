@@ -24,12 +24,12 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes"
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	"github.com/AndrienkoAleksandr/client-go/rest"
+	manualfake "github.com/AndrienkoAleksandr/client-go/rest/fake"
 	appsv1 "k8s.io/api/apps/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/kubernetes/scheme"
-	"k8s.io/client-go/rest"
-	manualfake "k8s.io/client-go/rest/fake"
 )
 
 func TestListTimeout(t *testing.T) {

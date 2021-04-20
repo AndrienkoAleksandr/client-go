@@ -19,9 +19,9 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1alpha1 "k8s.io/api/settings/v1alpha1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type SettingsV1alpha1Interface interface {

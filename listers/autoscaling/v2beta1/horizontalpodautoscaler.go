@@ -19,10 +19,10 @@ limitations under the License.
 package v2beta1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
 	v2beta1 "k8s.io/api/autoscaling/v2beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/client-go/tools/cache"
 )
 
 // HorizontalPodAutoscalerLister helps list HorizontalPodAutoscalers.

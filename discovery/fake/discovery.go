@@ -19,14 +19,14 @@ package fake
 import (
 	"fmt"
 
-	"github.com/googleapis/gnostic/OpenAPIv2"
+	openapi_v2 "github.com/googleapis/gnostic/OpenAPIv2"
 
+	kubeversion "github.com/AndrienkoAleksandr/client-go/pkg/version"
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
+	"github.com/AndrienkoAleksandr/client-go/testing"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/version"
-	kubeversion "k8s.io/client-go/pkg/version"
-	restclient "k8s.io/client-go/rest"
-	"k8s.io/client-go/testing"
 )
 
 // FakeDiscovery implements discovery.DiscoveryInterface and sometimes calls testing.Fake.Invoke with an action,

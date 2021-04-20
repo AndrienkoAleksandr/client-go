@@ -27,13 +27,13 @@ import (
 	"syscall"
 	"time"
 
+	clientset "github.com/AndrienkoAleksandr/client-go/kubernetes"
+	"github.com/AndrienkoAleksandr/client-go/rest"
+	"github.com/AndrienkoAleksandr/client-go/tools/clientcmd"
+	"github.com/AndrienkoAleksandr/client-go/tools/leaderelection"
+	"github.com/AndrienkoAleksandr/client-go/tools/leaderelection/resourcelock"
+	"github.com/AndrienkoAleksandr/client-go/transport"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	clientset "k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/rest"
-	"k8s.io/client-go/tools/clientcmd"
-	"k8s.io/client-go/tools/leaderelection"
-	"k8s.io/client-go/tools/leaderelection/resourcelock"
-	"k8s.io/client-go/transport"
 	"k8s.io/klog"
 )
 

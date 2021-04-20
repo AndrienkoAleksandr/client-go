@@ -19,11 +19,11 @@ package extensionsv1beta1
 import (
 	"fmt"
 
+	scheme "github.com/AndrienkoAleksandr/client-go/scale/scheme"
 	v1beta1 "k8s.io/api/extensions/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/conversion"
 	"k8s.io/apimachinery/pkg/runtime"
-	scheme "k8s.io/client-go/scale/scheme"
 )
 
 // addConversions registers conversions between the internal version

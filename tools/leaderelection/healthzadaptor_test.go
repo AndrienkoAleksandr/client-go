@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
+	rl "github.com/AndrienkoAleksandr/client-go/tools/leaderelection/resourcelock"
 	"k8s.io/apimachinery/pkg/util/clock"
-	rl "k8s.io/client-go/tools/leaderelection/resourcelock"
 	"net/http"
 )
 

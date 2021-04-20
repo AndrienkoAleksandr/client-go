@@ -31,6 +31,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/pkg/apis/clientauthentication"
+	"github.com/AndrienkoAleksandr/client-go/pkg/apis/clientauthentication/v1alpha1"
+	"github.com/AndrienkoAleksandr/client-go/pkg/apis/clientauthentication/v1beta1"
+	"github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
+	"github.com/AndrienkoAleksandr/client-go/transport"
+	"github.com/AndrienkoAleksandr/client-go/util/connrotation"
 	"github.com/davecgh/go-spew/spew"
 	"golang.org/x/crypto/ssh/terminal"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -38,12 +44,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	"k8s.io/client-go/pkg/apis/clientauthentication/v1alpha1"
-	"k8s.io/client-go/pkg/apis/clientauthentication/v1beta1"
-	"k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
-	"k8s.io/client-go/util/connrotation"
 	"k8s.io/klog"
 )
 

@@ -19,8 +19,8 @@ limitations under the License.
 package auditregistration
 
 import (
-	v1alpha1 "k8s.io/client-go/informers/auditregistration/v1alpha1"
-	internalinterfaces "k8s.io/client-go/informers/internalinterfaces"
+	v1alpha1 "github.com/AndrienkoAleksandr/client-go/informers/auditregistration/v1alpha1"
+	internalinterfaces "github.com/AndrienkoAleksandr/client-go/informers/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

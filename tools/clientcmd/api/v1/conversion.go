@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
 	"k8s.io/apimachinery/pkg/conversion"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/client-go/tools/clientcmd/api"
 )
 
 func addConversionFuncs(scheme *runtime.Scheme) error {

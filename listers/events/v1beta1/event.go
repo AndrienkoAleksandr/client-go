@@ -19,10 +19,10 @@ limitations under the License.
 package v1beta1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
 	v1beta1 "k8s.io/api/events/v1beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/client-go/tools/cache"
 )
 
 // EventLister helps list Events.

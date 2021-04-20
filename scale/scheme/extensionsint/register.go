@@ -17,10 +17,10 @@ limitations under the License.
 package extensionsint
 
 import (
+	scalescheme "github.com/AndrienkoAleksandr/client-go/scale/scheme"
 	extensionsv1beta1 "k8s.io/api/extensions/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	scalescheme "k8s.io/client-go/scale/scheme"
 )
 
 // GroupName is the group name use in this package

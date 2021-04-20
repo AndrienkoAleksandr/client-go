@@ -17,9 +17,9 @@ limitations under the License.
 package dynamicinformer
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/informers"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/client-go/informers"
 )
 
 // DynamicSharedInformerFactory provides access to a shared informer and lister for dynamic client

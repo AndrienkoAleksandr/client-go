@@ -21,14 +21,14 @@ package v1beta1
 import (
 	time "time"
 
+	internalinterfaces "github.com/AndrienkoAleksandr/client-go/informers/internalinterfaces"
+	kubernetes "github.com/AndrienkoAleksandr/client-go/kubernetes"
+	v1beta1 "github.com/AndrienkoAleksandr/client-go/listers/extensions/v1beta1"
+	cache "github.com/AndrienkoAleksandr/client-go/tools/cache"
 	extensionsv1beta1 "k8s.io/api/extensions/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
-	internalinterfaces "k8s.io/client-go/informers/internalinterfaces"
-	kubernetes "k8s.io/client-go/kubernetes"
-	v1beta1 "k8s.io/client-go/listers/extensions/v1beta1"
-	cache "k8s.io/client-go/tools/cache"
 )
 
 // PodSecurityPolicyInformer provides access to a shared informer and lister for

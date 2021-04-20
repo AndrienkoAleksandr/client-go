@@ -17,13 +17,13 @@ limitations under the License.
 package latest
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
+	v1 "github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer/json"
 	"k8s.io/apimachinery/pkg/runtime/serializer/versioning"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/tools/clientcmd/api/v1"
 )
 
 // Version is the string that represents the current external default version.

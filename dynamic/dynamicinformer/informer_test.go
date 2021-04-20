@@ -21,15 +21,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/dynamic/dynamicinformer"
+	"github.com/AndrienkoAleksandr/client-go/dynamic/fake"
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
 	"k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/client-go/dynamic/dynamicinformer"
-	"k8s.io/client-go/dynamic/fake"
-	"k8s.io/client-go/tools/cache"
 )
 
 func TestDynamicSharedInformerFactory(t *testing.T) {

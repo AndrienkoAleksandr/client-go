@@ -23,6 +23,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/fake"
+	fakeclient "github.com/AndrienkoAleksandr/client-go/testing"
+	rl "github.com/AndrienkoAleksandr/client-go/tools/leaderelection/resourcelock"
+	"github.com/AndrienkoAleksandr/client-go/tools/record"
 	coordinationv1 "k8s.io/api/coordination/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/equality"
@@ -31,10 +35,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/clock"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/client-go/kubernetes/fake"
-	fakeclient "k8s.io/client-go/testing"
-	rl "k8s.io/client-go/tools/leaderelection/resourcelock"
-	"k8s.io/client-go/tools/record"
 )
 
 func createLockObject(objectType, namespace, name string, record rl.LeaderElectionRecord) (obj runtime.Object) {

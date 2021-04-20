@@ -7,13 +7,13 @@ library install, don't mind getting HEAD (which may be less stable than a
 particular release), then simply:
 
 ```sh
-go get k8s.io/client-go@master
+go get github.com/AndrienkoAleksandr/client-go@master
 ```
 
-This will record a dependency on `k8s.io/client-go` in your go module.
-You can now import and use the `k8s.io/client-go` APIs in your project.
+This will record a dependency on `github.com/AndrienkoAleksandr/client-go` in your go module.
+You can now import and use the `github.com/AndrienkoAleksandr/client-go` APIs in your project.
 The next time you `go build`, `go test`, or `go run` your project,
-`k8s.io/client-go` and its dependencies will be downloaded (if needed),
+`github.com/AndrienkoAleksandr/client-go` and its dependencies will be downloaded (if needed),
 and detailed dependency version info will be added to your `go.mod` file
 (or you can also run `go mod tidy` to do this directly).
 
@@ -21,22 +21,22 @@ This assumes you are using go modules with go 1.11+.
 If you get a message like `cannot use path@version syntax in GOPATH mode`,
 you can choose to [opt into using go modules](#go-modules).
 If you are using a version of go prior to 1.11, or do not wish to use 
-go modules, you can download `k8s.io/client-go` to your `$GOPATH` instead:
+go modules, you can download `github.com/AndrienkoAleksandr/client-go` to your `$GOPATH` instead:
 
 ```sh
-go get -u k8s.io/client-go/...
+go get -u github.com/AndrienkoAleksandr/client-go/...
 go get -u k8s.io/apimachinery/...
-cd $GOPATH/src/k8s.io/client-go
+cd $GOPATH/src/github.com/AndrienkoAleksandr/client-go
 git checkout v11.0.0
 cd $GOPATH/src/k8s.io/apimachinery
 git checkout kubernetes-1.14.0
 ```
 
-This downloads a version of `k8s.io/client-go` prior to v1.12.0,
-which includes most of its dependencies in its `k8s.io/client-go/vendor` path
+This downloads a version of `github.com/AndrienkoAleksandr/client-go` prior to v1.12.0,
+which includes most of its dependencies in its `github.com/AndrienkoAleksandr/client-go/vendor` path
 (except for `k8s.io/apimachinery` and `glog`).
 
-We excluded `k8s.io/apimachinery` and `glog` from `k8s.io/client-go/vendor` to
+We excluded `k8s.io/apimachinery` and `glog` from `github.com/AndrienkoAleksandr/client-go/vendor` to
 prevent `go get` users from hitting issues like
 [#19](https://github.com/kubernetes/client-go/issues/19) and
 [#83](https://github.com/kubernetes/client-go/issues/83). If your project shares
@@ -86,20 +86,20 @@ Indicate which version of `client-go` your project requires.
 For `client-go` on master (and once version v12.0.0 is released), this is a single step:
 
 ```sh
-go get k8s.io/client-go@master # or v12.0.0+ once released
+go get github.com/AndrienkoAleksandr/client-go@master # or v12.0.0+ once released
 ```
 
 For `client-go` prior to v12.0.0, you also need to indicate the required versions of `k8s.io/api` and `k8s.io/apimachinery`:
 
 ```sh
-go get k8s.io/client-go@v11.0.0              # replace v11.0.0 with the required version (or use kubernetes-1.x.y tags if desired)
+go get github.com/AndrienkoAleksandr/client-go@v11.0.0              # replace v11.0.0 with the required version (or use kubernetes-1.x.y tags if desired)
 go get k8s.io/api@kubernetes-1.14.0          # replace kubernetes-1.14.0 with the required version
 go get k8s.io/apimachinery@kubernetes-1.14.0 # replace kubernetes-1.14.0 with the required version
 ```
 
-You can now import and use the `k8s.io/client-go` APIs in your project.
+You can now import and use the `github.com/AndrienkoAleksandr/client-go` APIs in your project.
 The next time you `go build`, `go test`, or `go run` your project,
-`k8s.io/client-go` and its dependencies will be downloaded (if needed),
+`github.com/AndrienkoAleksandr/client-go` and its dependencies will be downloaded (if needed),
 and detailed dependency version info will be added to your `go.mod` file
 (or you can also run `go mod tidy` to do this directly).
 
@@ -118,7 +118,7 @@ your project:
 ```yaml
 package: ( your project's import path ) # e.g. github.com/foo/bar
 import:
-- package: k8s.io/client-go
+- package: github.com/AndrienkoAleksandr/client-go
   version: v11.0.0 # replace v11.0.0 with the required version
 ```
 
@@ -136,7 +136,7 @@ This can also be abbreviated as:
 glide up -v
 ```
 
-At this point, `k8s.io/client-go` should be added to your project's vendor/.
+At this point, `github.com/AndrienkoAleksandr/client-go` should be added to your project's vendor/.
 `client-go`'s dependencies should be flattened and be added to your project's
 vendor/ as well.
 
@@ -151,7 +151,7 @@ requests can override the version manually in `glide.yaml`. For example:
 ```yaml
 package: ( your project's import path ) # e.g. github.com/foo/bar
 import:
-- package: k8s.io/client-go
+- package: github.com/AndrienkoAleksandr/client-go
   version: v11.0.0 # replace v11.0.0 with the required version
 # Use a newer version of go-spew even though client-go wants an old one.
 - package: github.com/davecgh/go-spew
@@ -175,8 +175,8 @@ and you have a copy of godep somewhere in your $PATH.
 To install `client-go` and place its dependencies in your `$GOPATH`:
 
 ```sh
-go get k8s.io/client-go/...
-cd $GOPATH/src/k8s.io/client-go
+go get github.com/AndrienkoAleksandr/client-go/...
+cd $GOPATH/src/github.com/AndrienkoAleksandr/client-go
 git checkout v11.0.0 # v11.0.0 or older
 # cd 1.5 # only necessary with 1.5 and 1.4 clients.
 godep restore ./...

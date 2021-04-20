@@ -19,9 +19,9 @@ package deprecated_dynamic
 import (
 	"sync"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	restclient "k8s.io/client-go/rest"
 )
 
 // ClientPool manages a pool of dynamic clients.

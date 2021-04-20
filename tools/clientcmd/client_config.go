@@ -27,9 +27,9 @@ import (
 	"github.com/imdario/mergo"
 	"k8s.io/klog"
 
-	restclient "k8s.io/client-go/rest"
-	clientauth "k8s.io/client-go/tools/auth"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
+	clientauth "github.com/AndrienkoAleksandr/client-go/tools/auth"
+	clientcmdapi "github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
 )
 
 var (

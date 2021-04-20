@@ -19,16 +19,16 @@ package restmapper
 import (
 	"testing"
 
-	"github.com/googleapis/gnostic/OpenAPIv2"
+	openapi_v2 "github.com/googleapis/gnostic/OpenAPIv2"
 
+	"github.com/AndrienkoAleksandr/client-go/discovery"
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
+	"github.com/AndrienkoAleksandr/client-go/rest/fake"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/version"
-	"k8s.io/client-go/discovery"
-	restclient "k8s.io/client-go/rest"
-	"k8s.io/client-go/rest/fake"
 )
 
 func TestReplaceAliases(t *testing.T) {

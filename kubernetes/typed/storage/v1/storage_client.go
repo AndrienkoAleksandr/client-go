@@ -19,9 +19,9 @@ limitations under the License.
 package v1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1 "k8s.io/api/storage/v1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type StorageV1Interface interface {

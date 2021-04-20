@@ -17,8 +17,8 @@ limitations under the License.
 package v1beta1
 
 import (
+	clientauthentication "github.com/AndrienkoAleksandr/client-go/pkg/apis/clientauthentication"
 	conversion "k8s.io/apimachinery/pkg/conversion"
-	clientauthentication "k8s.io/client-go/pkg/apis/clientauthentication"
 )
 
 func Convert_clientauthentication_ExecCredentialSpec_To_v1beta1_ExecCredentialSpec(in *clientauthentication.ExecCredentialSpec, out *ExecCredentialSpec, s conversion.Scope) error {

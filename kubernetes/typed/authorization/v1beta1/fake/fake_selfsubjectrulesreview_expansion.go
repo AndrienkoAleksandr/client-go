@@ -17,8 +17,8 @@ limitations under the License.
 package fake
 
 import (
+	core "github.com/AndrienkoAleksandr/client-go/testing"
 	authorizationapi "k8s.io/api/authorization/v1beta1"
-	core "k8s.io/client-go/testing"
 )
 
 func (c *FakeSelfSubjectRulesReviews) Create(srr *authorizationapi.SelfSubjectRulesReview) (result *authorizationapi.SelfSubjectRulesReview, err error) {

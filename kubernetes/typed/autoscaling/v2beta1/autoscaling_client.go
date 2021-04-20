@@ -19,9 +19,9 @@ limitations under the License.
 package v2beta1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v2beta1 "k8s.io/api/autoscaling/v2beta1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type AutoscalingV2beta1Interface interface {

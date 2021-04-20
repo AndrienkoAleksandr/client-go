@@ -19,12 +19,12 @@ package scale
 import (
 	"fmt"
 
+	"github.com/AndrienkoAleksandr/client-go/dynamic"
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	autoscaling "k8s.io/api/autoscaling/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/client-go/dynamic"
-	restclient "k8s.io/client-go/rest"
 )
 
 var scaleConverter = NewScaleConverter()

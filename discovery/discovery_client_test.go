@@ -29,12 +29,12 @@ import (
 	"github.com/googleapis/gnostic/OpenAPIv2"
 	"github.com/stretchr/testify/assert"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/diff"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/version"
-	restclient "k8s.io/client-go/rest"
 )
 
 func TestGetServerVersion(t *testing.T) {

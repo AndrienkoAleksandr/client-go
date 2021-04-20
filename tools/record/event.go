@@ -21,6 +21,9 @@ import (
 	"math/rand"
 	"time"
 
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
+	"github.com/AndrienkoAleksandr/client-go/tools/record/util"
+	ref "github.com/AndrienkoAleksandr/client-go/tools/reference"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -28,9 +31,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/clock"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/watch"
-	restclient "k8s.io/client-go/rest"
-	"k8s.io/client-go/tools/record/util"
-	ref "k8s.io/client-go/tools/reference"
 	"k8s.io/klog"
 )
 

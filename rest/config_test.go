@@ -29,14 +29,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	clientcmdapi "github.com/AndrienkoAleksandr/client-go/tools/clientcmd/api"
+	"github.com/AndrienkoAleksandr/client-go/transport"
+	"github.com/AndrienkoAleksandr/client-go/util/flowcontrol"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/client-go/kubernetes/scheme"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
-	"k8s.io/client-go/util/flowcontrol"
 
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"

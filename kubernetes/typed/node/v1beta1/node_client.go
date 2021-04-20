@@ -19,9 +19,9 @@ limitations under the License.
 package v1beta1
 
 import (
+	"github.com/AndrienkoAleksandr/client-go/kubernetes/scheme"
+	rest "github.com/AndrienkoAleksandr/client-go/rest"
 	v1beta1 "k8s.io/api/node/v1beta1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type NodeV1beta1Interface interface {

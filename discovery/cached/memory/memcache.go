@@ -24,14 +24,14 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/googleapis/gnostic/OpenAPIv2"
+	openapi_v2 "github.com/googleapis/gnostic/OpenAPIv2"
 
+	"github.com/AndrienkoAleksandr/client-go/discovery"
+	restclient "github.com/AndrienkoAleksandr/client-go/rest"
 	errorsutil "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/version"
-	"k8s.io/client-go/discovery"
-	restclient "k8s.io/client-go/rest"
 )
 
 type cacheEntry struct {

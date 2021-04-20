@@ -24,14 +24,14 @@ import (
 	"testing"
 	"time"
 
+	fakeclient "github.com/AndrienkoAleksandr/client-go/kubernetes/fake"
+	"github.com/AndrienkoAleksandr/client-go/tools/cache"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	fakeclient "k8s.io/client-go/kubernetes/fake"
-	"k8s.io/client-go/tools/cache"
 )
 
 type fakePod struct {
