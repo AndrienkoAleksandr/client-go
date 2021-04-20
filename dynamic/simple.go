@@ -66,9 +66,16 @@ func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	config := ConfigFor(inConfig)
 	// for serializing the options
 	logrus.Infof("Config before... %v", config)
-	config.GroupVersion = &schema.GroupVersion{}
-	config.APIPath = "/if-you-see-this-search-for-the-break"
+	if config == nil {
+		config.GroupVersion = &schema.GroupVersion{}
+	}
+	
+	if len(config.APIPath) == 0 {
+		config.APIPath = "/if-you-see-this-search-for-the-break"
+	}
+	
 	logrus.Infof("TEST==============")
+	logrus.Infof("Config after... %v", config)
 
 	restClient, err := rest.RESTClientFor(config)
 	if err != nil {
