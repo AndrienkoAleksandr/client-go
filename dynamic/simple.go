@@ -77,6 +77,7 @@ func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	logrus.Infof("TEST==============")
 	logrus.Infof("Config after... %+v", config)
 	logrus.Infof("Gonfig version is %+v", config.GroupVersion)
+	logrus.Infof("Token: %s", config.BearerToken)
 
 	restClient, err := rest.RESTClientFor(config)
 	if err != nil {
