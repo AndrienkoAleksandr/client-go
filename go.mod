@@ -19,6 +19,7 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20170728041850-787624de3eb7
 	github.com/imdario/mergo v0.3.5
 	github.com/peterbourgon/diskv v2.0.1+incompatible
+	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/pflag v1.0.1
 	github.com/stretchr/testify v1.2.2
 	golang.org/x/crypto v0.0.0-20181025213731-e84da0312774

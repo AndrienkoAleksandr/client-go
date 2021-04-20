@@ -65,6 +65,7 @@ func NewForConfigOrDie(c *rest.Config) Interface {
 func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	config := ConfigFor(inConfig)
 	// for serializing the options
+	logrus.Infof("Config before... %v", config)
 	config.GroupVersion = &schema.GroupVersion{}
 	config.APIPath = "/if-you-see-this-search-for-the-break"
 	logrus.Infof("TEST==============")
