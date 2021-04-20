@@ -254,7 +254,10 @@ func (c *dynamicResourceClient) Get(name string, opts metav1.GetOptions, subreso
 	if len(name) == 0 {
 		return nil, fmt.Errorf("name is required")
 	}
-	result := c.client.client.Get().AbsPath(append(c.makeURLSegments(name), subresources...)...).SpecificallyVersionedParams(&opts, dynamicParameterCodec, versionV1).Do()
+	result := c.client.client.Get().
+			AbsPath(append(c.makeURLSegments(name), subresources...)...).
+			SpecificallyVersionedParams(&opts, dynamicParameterCodec, versionV1).
+			Do()
 	if err := result.Error(); err != nil {
 		return nil, err
 	}

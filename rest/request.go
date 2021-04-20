@@ -35,6 +35,7 @@ import (
 	restclientwatch "github.com/AndrienkoAleksandr/client-go/rest/watch"
 	"github.com/AndrienkoAleksandr/client-go/tools/metrics"
 	"github.com/AndrienkoAleksandr/client-go/util/flowcontrol"
+	"github.com/sirupsen/logrus"
 	"golang.org/x/net/http2"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -807,6 +808,13 @@ func (r *Request) Do() Result {
 
 	var result Result
 	err := r.request(func(req *http.Request, resp *http.Response) {
+		logrus.Info("===Http Request===")
+		logrus.Infof("====== : %+v", req)
+		logrus.Info("======")
+
+		logrus.Info("===k8s model request===")
+		logrus.Infof("====== : %+v", r)
+		logrus.Info("======")
 		result = r.transformResponse(resp, req)
 	})
 	if err != nil {
