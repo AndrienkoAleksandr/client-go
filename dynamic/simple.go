@@ -66,7 +66,7 @@ func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	config := ConfigFor(inConfig)
 	// for serializing the options
 	logrus.Infof("Config before... %v", config)
-	if config == nil {
+	if config.GroupVersion == nil {
 		config.GroupVersion = &schema.GroupVersion{}
 	}
 	
