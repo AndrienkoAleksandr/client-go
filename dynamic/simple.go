@@ -65,7 +65,7 @@ func NewForConfigOrDie(c *rest.Config) Interface {
 func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	config := ConfigFor(inConfig)
 	// for serializing the options
-	logrus.Infof("Config before... %v", config)
+	logrus.Infof("Config before... %+v", config)
 	if config.GroupVersion == nil {
 		config.GroupVersion = &schema.GroupVersion{}
 	}
@@ -75,7 +75,8 @@ func NewForConfig(inConfig *rest.Config) (Interface, error) {
 	}
 	
 	logrus.Infof("TEST==============")
-	logrus.Infof("Config after... %v", config)
+	logrus.Infof("Config after... %+v", config)
+	logrus.Infof("Gonfig version is %+v", config.GroupVersion)
 
 	restClient, err := rest.RESTClientFor(config)
 	if err != nil {
