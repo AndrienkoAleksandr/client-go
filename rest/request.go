@@ -703,10 +703,11 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 
 	client := r.client
 	if client == nil {
-		logrus.Info("Set default golang client !!!")
+		// logrus.Info("Set default golang client !!!")
 		client = http.DefaultClient
 	}
-	logrus.Infof("======Trying evaluate client object %T", client)
+
+	// logrus.Infof("======Trying evaluate client object %T", client)
 
 	// Right now we make about ten retry attempts if we get a Retry-After response.
 	maxRetries := 10
@@ -729,6 +730,7 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 			req = req.WithContext(r.ctx)
 		}
 		req.Header = r.headers
+		req.Header.Add("Authorization", "Bearer _DLzpyZvvzWULHSr9Au4pQG5lxi3-xz583dgz7VzkJg")
 
 		r.backoffMgr.Sleep(r.backoffMgr.CalculateBackoff(r.URL()))
 		if retries > 0 {
