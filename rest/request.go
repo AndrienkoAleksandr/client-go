@@ -706,7 +706,7 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 		logrus.Info("Set default golang client !!!")
 		client = http.DefaultClient
 	}
-	logrus.Info("======Trying evaluate client object %+v", client)
+	logrus.Info("======Trying evaluate client object %T", client)
 
 	// Right now we make about ten retry attempts if we get a Retry-After response.
 	maxRetries := 10
