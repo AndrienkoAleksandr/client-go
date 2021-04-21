@@ -730,7 +730,7 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 			req = req.WithContext(r.ctx)
 		}
 		req.Header = r.headers
-		req.Header.Add("Authorization", "Bearer _DLzpyZvvzWULHSr9Au4pQG5lxi3-xz583dgz7VzkJg")
+		// req.Header.Add("Authorization", "Bearer ")
 
 		r.backoffMgr.Sleep(r.backoffMgr.CalculateBackoff(r.URL()))
 		if retries > 0 {
@@ -746,6 +746,7 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 			r.backoffMgr.UpdateBackoff(r.URL(), err, 0)
 		} else {
 			r.backoffMgr.UpdateBackoff(r.URL(), err, resp.StatusCode)
+			logrus.Info("Response status code is: %s", resp.StatusCode)
 		}
 		if err != nil {
 			// "Connection reset by peer" is usually a transient error.
